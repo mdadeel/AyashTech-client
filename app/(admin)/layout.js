@@ -19,21 +19,19 @@ export const metadata = {
 
 export default function AdminLayout({ children }) {
     return (
-        <html lang="en" suppressHydrationWarning>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
-                <Toaster
-                    position="top-right"
-                    toastOptions={{
-                        duration: 3000,
-                        style: {
-                            background: '#1a1a1a',
-                            color: '#fff',
-                            border: '1px solid #333',
-                        },
-                    }}
-                />
-                {children}
-            </body>
-        </html>
+        <div className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}>
+            <Toaster
+                position="top-right"
+                toastOptions={{
+                    duration: 3000,
+                    style: {
+                        background: '#1a1a1a',
+                        color: '#fff',
+                        border: '1px solid #333',
+                    },
+                }}
+            />
+            {children}
+        </div>
     );
 }
