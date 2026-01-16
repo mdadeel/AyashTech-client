@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Plus, X, AlertCircle, Upload } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { createItem } from '../lib/api';
+import { createItem } from '../../lib/api';
 
 const categories = ['Electronics', 'Accessories', 'Clothing', 'Home', 'Fitness', 'Furniture'];
 
