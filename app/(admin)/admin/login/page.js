@@ -7,8 +7,8 @@ import toast from 'react-hot-toast';
 import Cookies from 'js-cookie';
 
 const ADMIN_CREDENTIALS = {
-    email: 'admin@store.com',
-    password: 'password123'
+    email: 'admin@ayashtech.com',
+    password: 'admin2026!'
 };
 
 export default function AdminLoginPage() {
