@@ -10,6 +10,7 @@ import {
 import Cookies from 'js-cookie';
 import toast from 'react-hot-toast';
 import { getItems, deleteItem } from '../../../lib/api';
+import Logo from '../../../components/Logo';
 
 export default function AdminDashboard() {
     const router = useRouter();
@@ -71,10 +72,7 @@ export default function AdminDashboard() {
             {/* Sidebar */}
             <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-neutral-900 border-r border-neutral-800 transform transition-transform lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="flex items-center gap-3 px-6 py-5 border-b border-neutral-800">
-                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center">
-                        <ShoppingBag className="w-5 h-5" />
-                    </div>
-                    <span className="font-semibold tracking-tight">Admin Panel</span>
+                    <Logo />
                 </div>
 
                 <nav className="p-4 space-y-1">
