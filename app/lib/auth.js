@@ -39,6 +39,12 @@ export function authenticate(email, password) {
         Cookies.set('user_id', user.id, COOKIE_OPTIONS);
         Cookies.set('user_name', user.name, COOKIE_OPTIONS);
 
+        // If user is admin, also set the admin_token to satisfy middleware checks
+        // This ensures the main login page works seamlessy for admins
+        if (user.role === 'admin') {
+            Cookies.set('admin_token', token, COOKIE_OPTIONS);
+        }
+
         return {
             success: true,
             user: {
